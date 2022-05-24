@@ -48,3 +48,43 @@ VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 
 Bila Sukses maka seperti berikut :<br>
 ![Add Data 2](Pic/input_data2.png)<br>
 
+## Membuat Program CRUD
+Pertama saya buat folder <b>lab8_web_php</b> pada root directory.<br>
+![New Folder](Pic/create_databasefolder.png)<br>
+
+### Membuat Koneksi Database
+Kemudian masuk ke dalam folder tadi dan buat file baru dengan nama koneksi.php dan masukkan syntax berikut :<br>
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koneksi</title>
+</head>
+<body>
+<?php 
+$host = "localhost"; 
+$user = "root"; 
+$pass = ""; 
+$db = "latihan1"; 
+
+$conn = mysqli_connect($host, $user, $pass, $db); 
+if ($conn == false) 
+{ 
+    echo "Koneksi ke server gagal."; 
+    die(); 
+} 
+else 
+{ 
+    echo "Koneksi berhasil"; 
+}
+?>
+</body>
+</html>
+```
+![Koneksi](Pic/koneksi1.png)<br>
+Hasilnya seperti berikut :<br>
+![Koneksi2](Pic/koneksi2.png)<br>
+
