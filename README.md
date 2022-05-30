@@ -404,3 +404,20 @@ Kemudian kita coba untuk merubah salah satu data yang telah ditambahkan.<br>
 Disini kita rubah datanya.<br>
 ![ubah3](Pic/ubah.png)<br>
 Data telah berubah
+
+### Menghapus data
+Yang terakhir saya akan membuat file hapus.php yang berfungsi untuk menghapus data, berikut syntaxnya :<br>
+```
+<?php 
+include_once 'koneksi.php'; 
+$id = $_GET['id']; 
+$sql = "DELETE FROM data_barang WHERE id_barang = '{$id}'"; 
+$result = mysqli_query($conn, $sql); 
+header('location: index.php'); 
+?>
+```
+Mari kita coba untuk hapus salah satu data.<br>
+![hapus1](Pic/hapus1.png)<br>
+Saya akan hapus data yang terbaru.<br>
+![hapus2](Pic/hapus2.png)<br>
+Data telah terhapus
